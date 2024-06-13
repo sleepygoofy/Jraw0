@@ -1,12 +1,11 @@
-
 const texts = ["Amateur Programmer", "Donate Crypto!", "Give me $2 in crypto and this yours", "Liking toes is weird asf", "Gay son or thot daughter?"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
-let typingSpeed = 125; // Typing speed in milliseconds
-let deleteSpeed = 75; // Deleting speed in milliseconds
-let delayBeforeDelete = 2500; // Delay before deleting in milliseconds
-let blinkSpeed = 50; // Blinking speed in milliseconds
+let typingSpeed = 125;
+let deleteSpeed = 75;
+let delayBeforeDelete = 2500;
+let blinkSpeed = 50;
 
 function typeWriter() {
     const currentText = texts[textIndex];
@@ -20,20 +19,19 @@ function typeWriter() {
         charIndex++;
     }
 
-    // Add a typewriter line when typing
-    textToShow += "<span id='typewriter-line'>|</span>"; // Typewriter line
+    textToShow += "<span id='typewriter-line'>|</span>";
 
     document.getElementById("typewriter").innerHTML = textToShow;
 
     if (!isDeleting && charIndex === currentText.length + 1) {
         isDeleting = true;
-        setTimeout(typeWriter, delayBeforeDelete); // Delay before deleting
+        setTimeout(typeWriter, delayBeforeDelete);
     } else if (isDeleting && charIndex === 0) {
         isDeleting = false;
         textIndex = (textIndex + 1) % texts.length;
-        setTimeout(typeWriter, 1000); // Delay before typing next text
+        setTimeout(typeWriter, 1000);
     } else {
-        setTimeout(typeWriter, isDeleting ? deleteSpeed : typingSpeed); // Typing or deleting speed
+        setTimeout(typeWriter, isDeleting? deleteSpeed : typingSpeed);
     }
 }
 
@@ -51,23 +49,20 @@ setInterval(() => {
     }
 }, 50);
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     let video = document.getElementById('video');
-    video.volume = 0.25; // Volume should be a number
+    video.volume = 0.25;
 
     let clickToEnterOverlay = document.getElementById('clickToEnter');
     let main = document.getElementById("Main");
 
     clickToEnterOverlay.onclick = () => {
-        clickToEnterOverlay.style.transition = '0.75s'; // Set transition before changing opacity
+        clickToEnterOverlay.style.transition = '0.75s';
         clickToEnterOverlay.style.opacity = '0';
         clickToEnterOverlay.style.zIndex = '-9999';
-
         main.style.opacity = "1";
         main.style.transition = "0.9s";
-        main.style.transform = "translate(-50%, -50%)"; // Use transform for translation
+        main.style.transform = "translate(-50%, -50%)";
 
         video.play();
         if (typeof typeWriter === "function") {
@@ -76,9 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 });
 
-
-
-///////////////////////////////////
 
 let copiedAlert = document.getElementById('copiedAlert')
 
@@ -101,7 +93,6 @@ function copyBTC() {
 function copyEth() {
     var copyEth = document.getElementById("inputEthereum");
 
-
     copyEth.select();
     copyEth.setSelectionRange(0, 9999);
 
@@ -118,7 +109,6 @@ function copyEth() {
 function copyLTC() {
     var copyLTC = document.getElementById("inputLitecoin");
 
-
     copyLTC.select();
     copyLTC.setSelectionRange(0, 9999);
 
@@ -134,7 +124,6 @@ function copyLTC() {
 
 function copyXMR() {
     var copyXMR = document.getElementById("inputMonero");
-
 
     copyXMR.select();
     copyXMR.setSelectionRange(0, 9999);
