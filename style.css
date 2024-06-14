@@ -124,6 +124,7 @@ a {
 .yti, .ghubi, .gunsi, .xi, .igi, .outerSiteIMG {
     user-select: none;
     pointer-events: all;
+    filter: drop-shadow(#ffffff 1px 0 7px) !important;
 }
 
 .myInput, .inputEthereum, .inputLitecoin, .inputMonero {
@@ -140,6 +141,7 @@ a {
     height: 0px;
     margin-top: 10000px;
     cursor: pointer;
+    filter: drop-shadow(#ffffff 1px 0 7px) !important;
 }
 
 .bitcoin:hover .tooltip, .Ethereum:hover .tooltip, .Litecoin:hover .tooltip, .Monero:hover .tooltip {

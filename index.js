@@ -49,6 +49,38 @@ setInterval(() => {
     }
 }, 50);
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const fullTitle = "@zyqunix";
+    let currentIndex = 0;
+    let forward = true;
+
+    function typeWriterEffect() {
+        if (forward) {
+            document.title = fullTitle.substring(0, currentIndex + 1);
+            currentIndex++;
+            if (currentIndex === fullTitle.length) {
+                forward = false;
+                setTimeout(typeWriterEffect, 1000); // Pause at full title
+                return;
+            }
+        } else {
+            document.title = fullTitle.substring(0, currentIndex - 1);
+            currentIndex--;
+            if (currentIndex === 0) {
+                forward = true;
+                setTimeout(typeWriterEffect, 500); // Pause at empty title
+                return;
+            }
+        }
+        setTimeout(typeWriterEffect, 333); // Adjust typing speed here
+    }
+    typeWriterEffect();
+});
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     let video = document.getElementById('video');
     video.volume = 0.25;
@@ -137,3 +169,16 @@ function copyXMR() {
         copiedAlert.style.transition = '0.25s'
     }, 2000);
 };
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const imgElement = document.getElementById('updating-image');
+    const baseImageUrl = "https://lanyard.cnrad.dev/api/1201415921802170388";
+
+    function updateImage() {
+        const timestamp = new Date().getTime();
+        imgElement.src = `${baseImageUrl}?t=${timestamp}`;
+    }
+
+    setInterval(updateImage, 500);
+});
