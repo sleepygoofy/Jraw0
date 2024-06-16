@@ -33,11 +33,15 @@ body {
     margin-bottom: 45%;
     font-size: 0.5em;
     color: rgb(120,120,120);
+    pointer-events: none;
+    user-select: none;
 }
 
 .ascii {
     width: 10em;
     position: fixed;
+    pointer-events: none;
+    user-select: none;
 }
 
 .main {
@@ -45,8 +49,8 @@ body {
     color: white;
     display: flex;
     position: absolute;
-    width: 50em;
-    height: 45em;
+    width: 45em;
+    height: 40em;
     background-color: rgb(20,20,20,0.775);
     top: 50%;
     left: 50%;
@@ -64,6 +68,7 @@ body {
     border-radius: 50%;
     position: fixed;
     margin-bottom: 64%;
+    user-select: none;
 }
 
 h1 {
@@ -83,7 +88,7 @@ h1 {
 .discord {
     position: fixed;
     margin-top: 25%;
-    pointer-events: none;
+    user-select: none;
 }
 
 .Links {
@@ -95,8 +100,8 @@ h1 {
     top: 50%;
     width: 100%;
     gap: 10px;
-    margin-top: 16.5em;
-    margin-left: -32em;
+    margin-top: 15.5em;
+    margin-left: -30em;
 }
 
 a {
@@ -141,7 +146,6 @@ a {
     height: 0px;
     margin-top: 10000px;
     cursor: pointer;
-    filter: drop-shadow(#ffffff 1px 0 7px) !important;
 }
 
 .bitcoin:hover .tooltip, .Ethereum:hover .tooltip, .Litecoin:hover .tooltip, .Monero:hover .tooltip {
@@ -154,6 +158,10 @@ a {
     opacity: 0;
     transition-delay: 0.3s;
     transition: 0.3s;
+}
+
+.bitcoinIMG, .ethIMG, .ltIMG, .mnIMG {
+    filter: drop-shadow(#ffffff 1px 0 7px) !important;
 }
 
 .bitcoinIMG {
@@ -195,4 +203,44 @@ a {
     transition-delay: 0.2s;
     transition: 0.3s ease;
     -webkit-user-drag: none;
+}
+
+#copiedAlert1,  #copiedAlert2, #copiedAlert3, #copiedAlert4{
+    display: flex;
+    box-shadow: none;
+    text-shadow: none;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    margin-top: -9960px;
+    text-decoration: none !important;
+    user-select: none;
+    pointer-events: none;
+    background-color: rgb(100,100,100);
+    width: 4em;
+    height: 2em;
+    border: 2px solid rgb(140,140,140);
+    border-radius: 1em;
+    line-height: 1.9;
+    font-size: 1.2em;
+}
+
+.copiedAlert1 {
+    margin-left: -10px;
+    opacity: 0;
+}
+
+.copiedAlert2 {
+    margin-left: 40px;
+    opacity: 0;
+}
+
+.copiedAlert3 {
+    margin-left: 87.5px;
+    opacity: 0;
+}
+
+.copiedAlert4 {
+    margin-left: 131px;
+    opacity: 0;
 }

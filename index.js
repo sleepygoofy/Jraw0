@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex++;
             if (currentIndex === fullTitle.length) {
                 forward = false;
-                setTimeout(typeWriterEffect, 1000); // Pause at full title
+                setTimeout(typeWriterEffect, 1500); // Pause at full title
                 return;
             }
         } else {
@@ -113,11 +113,9 @@ function copyBTC() {
     copyBTC.setSelectionRange(0, 9999); 
 
     navigator.clipboard.writeText(copyBTC.value);
-
-    copiedAlert.style.marginTop = '10px';
     
     setTimeout(function() {
-        copiedAlert.style.marginTop = '-100px';
+        copiedAlert.style.opacity = '-100px';
         copiedAlert.style.transition = '0.25s'
     }, 2000);
 };
@@ -130,7 +128,6 @@ function copyEth() {
 
     navigator.clipboard.writeText(copyEth.value);
     
-    copiedAlert.style.marginTop = '10px';
     
     setTimeout(function() {
         copiedAlert.style.marginTop = '-100px';
