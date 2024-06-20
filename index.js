@@ -166,16 +166,3 @@ function copyXMR() {
         copiedAlert.style.transition = '0.25s'
     }, 2000);
 };
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const imgElement = document.getElementById('updating-image');
-    const baseImageUrl = "https://lanyard.cnrad.dev/api/1201415921802170388";
-
-    function updateImage() {
-        const timestamp = new Date().getTime();
-        imgElement.src = `${baseImageUrl}?t=${timestamp}`;
-    }
-
-    setInterval(updateImage, 500);
-});
