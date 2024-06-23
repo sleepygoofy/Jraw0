@@ -31,7 +31,7 @@ function typeWriter() {
         textIndex = (textIndex + 1) % texts.length;
         setTimeout(typeWriter, 1000);
     } else {
-        setTimeout(typeWriter, isDeleting? deleteSpeed : typingSpeed);
+        setTimeout(typeWriter, isDeleting ? deleteSpeed : typingSpeed);
     }
 }
 
@@ -51,7 +51,7 @@ setInterval(() => {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const fullTitle = "@zyqunix";
     let currentIndex = 0;
     let forward = true;
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         clickToEnterOverlay.style.opacity = '0';
         clickToEnterOverlay.style.zIndex = '-9999';
         main.style.opacity = "1";
-        main.style.transition = "0.9s";
+        main.style.transition = "1s";
         main.style.transform = "translate(-50%, -50%)";
 
         video.play();
@@ -110,11 +110,11 @@ function copyBTC() {
     var copyBTC = document.getElementById("myInput");
 
     copyBTC.select();
-    copyBTC.setSelectionRange(0, 9999); 
+    copyBTC.setSelectionRange(0, 9999);
 
     navigator.clipboard.writeText(copyBTC.value);
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         copiedAlert.style.opacity = '-100px';
         copiedAlert.style.transition = '0.25s'
     }, 2000);
@@ -127,9 +127,9 @@ function copyEth() {
     copyEth.setSelectionRange(0, 9999);
 
     navigator.clipboard.writeText(copyEth.value);
-    
-    
-    setTimeout(function() {
+
+
+    setTimeout(function () {
         copiedAlert.style.marginTop = '-100px';
         copiedAlert.style.transition = '0.25s'
     }, 2000);
@@ -144,8 +144,8 @@ function copyLTC() {
     navigator.clipboard.writeText(copyLTC.value);
 
     copiedAlert.style.marginTop = '10px';
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         copiedAlert.style.marginTop = '-100px';
         copiedAlert.style.transition = '0.25s'
     }, 2000);
@@ -160,9 +160,10 @@ function copyXMR() {
     navigator.clipboard.writeText(copyXMR.value);
 
     copiedAlert.style.marginTop = '10px';
-    
-    setTimeout(function() {
+
+    setTimeout(function () {
         copiedAlert.style.marginTop = '-100px';
         copiedAlert.style.transition = '0.25s'
     }, 2000);
 };
+
