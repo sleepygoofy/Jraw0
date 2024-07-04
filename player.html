@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@zyqunix</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: monospace;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .player {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 400px;
+            height: 300px;
+            z-index: 2;
+            border: 2px solid rgba(150, 150, 150, 0.25);
+        }
+
+        .player h1 {
+            margin: 0;
+            font-size: 30px;
+            color: white;
+        }
+
+        .player p {
+            color: #ffffff;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            color: #ffffff !important;
+            filter: drop-shadow(#000000 1px 0 7px) !important;
+        }
+
+        .dc, .ig, .lk {
+            bottom: 50%;
+            left: 50%;
+            pointer-events: none;
+        }
+
+        .dci, .igi, .lki {
+            pointer-events: all;
+            transition: 0.2s;
+        }
+
+        .dci:hover, .igi:hover, .lki:hover {
+            transform: scale(1.1);
+        }
+
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            align-items: center;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .controls button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 7px;
+            width: 48px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            box-shadow: #000000 3px 3px 20px !important;
+        }
+
+        .controls button:active {
+            transform: translateY(1px);
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 300px;
+            height: 10px;
+            background: linear-gradient(to right, #ffffff 0%, #ffffff 0%, #bdbdbd 0%, #bdbdbd 100%);
+            outline: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            z-index: 3;
+            position: relative;
+            border: 1px solid #ffffff;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            cursor: pointer;
+            z-index: 3;
+            position: relative;
+            border: 1px solid #ffffff;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            z-index: 0;
+            text-align: center;
+        }
+
+        #videoPlayer {
+            height: 100%;
+        }
+
+        .cool {
+            opacity: 0.7;
+            height: 3px;
+            width: 100%;
+            background: linear-gradient(to right, transparent, white, transparent);
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .slider-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        .slider-container span {
+            color: white;
+            font-size: 14px;
+        }
+
+        .pfp {
+            width: 128px;
+            margin-top: -86px;
+            border-radius: 50%;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .player #typewriter {
+            color: white;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            margin-top: 5px;
+            margin-bottom: -5px;
+        }
+
+        #typewriter-line {
+            font-size: 16px;
+        }
+
+        .clickToEnter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            background-color: rgba(9, 9, 9, 0.95);
+            backdrop-filter: blur(20px);
+            transition: 1s;
+        }
+
+        .click123 {
+            margin-bottom: 45%;
+            font-size: 0.5em;
+            color: rgb(120, 120, 120);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .ascii {
+            width: 10em;
+            position: fixed;
+            pointer-events: none;
+            user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="video-container">
+        <video id="videoPlayer"></video>
+    </div>
+
+    <div class="player">
+        <img class="pfp"
+            src="https://cdn.discordapp.com/avatars/1201415921802170388/1b1e618d1d8eda064c07488b32abe518.webp?size=1024&format=webp&width=0&height=320">
+        <h1>zyqunix</h1>
+        <span class="desc" id="typewriter"></span>
+
+        <div class="icons">
+            <a class="ig" href="https://instagram.com/zyq_un" target="_blank" rel="noopener noreferrer">
+                <svg class="igi" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em"
+                    viewBox="3 2.98 18.01 18.04">
+                    <path fill="#ffffff"
+                        d="M20.947 8.305a6.53 6.53 0 0 0-.419-2.216a4.61 4.61 0 0 0-2.633-2.633a6.606 6.606 0 0 0-2.186-.42c-.962-.043-1.267-.055-3.709-.055s-2.755 0-3.71.055a6.606 6.606 0 0 0-2.185.42a4.607 4.607 0 0 0-2.633 2.633a6.554 6.554 0 0 0-.419 2.185c-.043.963-.056 1.268-.056 3.71s0 2.754.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.043 1.268.056 3.71.056s2.755 0 3.71-.056a6.59 6.59 0 0 0 2.186-.419a4.615 4.615 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.187c.043-.962.056-1.267.056-3.71c-.002-2.442-.002-2.752-.058-3.709zm-8.953 8.297c-2.554 0-4.623-2.069-4.623-4.623s2.069-4.623 4.623-4.623a4.623 4.623 0 0 1 0 9.246zm4.807-8.339a1.077 1.077 0 0 1-1.078-1.078a1.077 1.077 0 1 1 2.155 0c0 .596-.482 1.078-1.077 1.078z">
+                    </path>
+                    <circle cx="11.994" cy="11.979" r="3.003" fill="#ffffff"></circle>
+                </svg>
+            </a>
+
+            <a class="dc" href="https://discord.com/users/1201415921802170388" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="dci" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="1.96 4.26 20.03 15.53">
+                    <path fill="#ffffff"
+                        d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z">
+                    </path>
+                </svg>
+            </a>
+
+            <a class="lk" href="https://drugsellers.com/aqN9tGLnHup" target="_blank" rel="noopener noreferrer">
+                <svg class="lki" xmlns="http://www.w3.org/2000/svg" width="3em" height="3em" viewBox="2 2 28 28">
+                    <path fill="#ffffff"
+                        d="M11 16c0-1.393.078-2.734.222-4h9.556c.144 1.266.222 2.607.222 4c0 1.393-.078 2.734-.222 4h-9.556A35.485 35.485 0 0 1 11 16Zm-1.79 4A37.618 37.618 0 0 1 9 16c0-1.379.073-2.72.21-4H2.58A14.002 14.002 0 0 0 2 16c0 1.39.203 2.733.58 4h6.63Zm-5.863 2h6.138c.314 1.86.771 3.547 1.344 4.978c.369.922.793 1.758 1.272 2.472A14.036 14.036 0 0 1 3.347 22Zm8.168 0h8.97c-.29 1.6-.69 3.032-1.17 4.235c-.516 1.288-1.104 2.262-1.706 2.9c-.6.634-1.144.865-1.609.865c-.465 0-1.009-.231-1.609-.866c-.602-.637-1.19-1.611-1.705-2.899c-.481-1.203-.881-2.636-1.171-4.235Zm11 0c-.314 1.86-.771 3.547-1.344 4.978c-.369.922-.793 1.758-1.272 2.472A14.036 14.036 0 0 0 28.653 22h-6.138Zm6.905-2c.377-1.267.58-2.61.58-4c0-1.39-.203-2.733-.58-4h-6.63c.137 1.28.21 2.621.21 4s-.073 2.72-.21 4h6.63ZM19.314 5.765c.481 1.203.881 2.636 1.171 4.235h-8.97c.29-1.6.69-3.032 1.17-4.235c.516-1.288 1.104-2.263 1.706-2.9c.598-.631 1.14-.863 1.604-.865h.008c.464 0 1.007.233 1.606.866c.602.636 1.19 1.611 1.705 2.899ZM22.515 10h6.138a14.036 14.036 0 0 0-8.754-7.45c.479.714.903 1.55 1.272 2.472c.573 1.431 1.03 3.118 1.344 4.978ZM3.347 10h6.138c.314-1.86.771-3.547 1.344-4.978c.369-.922.793-1.758 1.272-2.472A14.036 14.036 0 0 0 3.347 10Z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+
+        <div class="cool"></div>
+
+        <p id="songInfo"></p>
+        <input type="range" min="0" max="100" value="0" class="slider" id="progressBar">
+
+        <div class="controls">
+            <button id="prev">&#171;</button>
+            <button id="playPause">&#9658;</button>
+            <button id="next">&#187;</button>
+        </div>
+    </div>
+
+    <div class="clickToEnter" id="clickToEnter">
+        <img class="ascii" src="https://easyfiles.cc/2024/5/5d696a25-bab7-49ed-a325-a0b1bb812ab8/transformedascii.png"
+            alt="">
+        <h6 class="click123">(click)</h6>
+    </div>
+
+    <script>
+
+        const texts = ["Amateur Programmer", "Donate Crypto!"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 125;
+        let deleteSpeed = 75;
+        let delayBeforeDelete = 2500;
+        let blinkSpeed = 50;
+
+        function typeWriter() {
+            const currentText = texts[textIndex];
+            let textToShow = '';
+
+            if (isDeleting) {
+                textToShow = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                textToShow = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            textToShow += "<span id='typewriter-line'>|</span>";
+
+            document.getElementById("typewriter").innerHTML = textToShow;
+
+            if (!isDeleting && charIndex === currentText.length + 1) {
+                isDeleting = true;
+                setTimeout(typeWriter, delayBeforeDelete);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(typeWriter, 1000);
+            } else {
+                setTimeout(typeWriter, isDeleting ? deleteSpeed : typingSpeed);
+            }
+        }
+
+        let opacity = 0;
+        let direction = 1;
+
+        setInterval(() => {
+            const typewriterLine = document.getElementById("typewriter-line");
+            if (typewriterLine) {
+                typewriterLine.style.opacity = opacity;
+                opacity += 0.1 * direction;
+                if (opacity <= 0 || opacity >= 1) {
+                    direction *= -1;
+                }
+            }
+        }, 50);
+
+
+
+        const songs = [
+            { title: "Lil Peep & Yung Bruh - White Tee", src: "https://easyfiles.cc/2024/7/2e7c25e3-a229-4d64-870b-361d6dd91d07/lil%20peep%20w_%20yung%20bruh%20-%20white%20tee-fudsUhWAG_o.mp4" },
+            { title: "[Facy] - iDog/iHome", src: "https://easyfiles.cc/2024/7/5acac3ca-c4f6-410d-a950-62b58ab09689/idog%20ihome.mp4" },
+            { title: "Immortal Technique - Dance With The Devil", src: "https://easyfiles.cc/2024/7/e4531233-e32f-4ba2-9577-9f0f29deb10a/Dance%20With%20The%20Devil%20-%20Immortal%20Technique-qggxTtnKTMo.mp4" },
+        ];
+
+        let currentSongIndex = 0;
+        let isPlaying = false;
+
+        const videoPlayer = document.getElementById("videoPlayer");
+        const playPauseButton = document.getElementById("playPause");
+        const songInfo = document.getElementById("songInfo");
+        const progressBar = document.getElementById("progressBar");
+
+        document.getElementById("prev").addEventListener("click", () => {
+            currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+            loadSong(currentSongIndex);
+            if (isPlaying) {
+                videoPlayer.play();
+            }
+        });
+
+        document.getElementById("next").addEventListener("click", () => {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            loadSong(currentSongIndex);
+            if (isPlaying) {
+                videoPlayer.play();
+            }
+        });
+
+        playPauseButton.addEventListener("click", () => {
+            if (isPlaying) {
+                videoPlayer.pause();
+                playPauseButton.innerHTML = "&#9658;";
+            } else {
+                videoPlayer.play();
+                playPauseButton.innerHTML = "&#10074;&#10074;";
+            }
+            isPlaying = !isPlaying;
+        });
+
+        videoPlayer.addEventListener("timeupdate", () => {
+            let value = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+            progressBar.value = value;
+            updateSliderBackground(value);
+        });
+
+        progressBar.addEventListener("input", () => {
+            let value = progressBar.value;
+            videoPlayer.currentTime = (value / 100) * videoPlayer.duration;
+            updateSliderBackground(value);
+        });
+
+        function updateSliderBackground(value) {
+            progressBar.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff ${value}%, #bdbdbd ${value}%, #bdbdbd 100%)`;
+        }
+
+        function loadSong(index) {
+            videoPlayer.src = songs[index].src;
+            songInfo.innerText = songs[index].title;
+            progressBar.value = 0;
+        }
+
+        loadSong(currentSongIndex);
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const fullTitle = "@zyqunix";
+            let currentIndex = 0;
+            let forward = true;
+
+            function typeWriterEffect() {
+                if (forward) {
+                    document.title = fullTitle.substring(0, currentIndex + 1);
+                    currentIndex++;
+                    if (currentIndex === fullTitle.length) {
+                        forward = false;
+                        setTimeout(typeWriterEffect, 1500); // Pause at full title
+                        return;
+                    }
+                } else {
+                    document.title = fullTitle.substring(0, currentIndex - 1);
+                    currentIndex--;
+                    if (currentIndex === 0) {
+                        forward = true;
+                        setTimeout(typeWriterEffect, 500); // Pause at empty title
+                        return;
+                    }
+                }
+                setTimeout(typeWriterEffect, 333); // Adjust typing speed here
+            }
+            typeWriterEffect();
+        });
+
+        let clickToEnterOverlay = document.getElementById('clickToEnter');
+
+        clickToEnterOverlay.onclick = () => {
+            clickToEnterOverlay.style.transition = '0.75s';
+            clickToEnterOverlay.style.opacity = '0';
+            clickToEnterOverlay.style.zIndex = '-9999';
+
+            videoPlayer.play();
+            playPauseButton.innerHTML = "&#10074;&#10074;";
+            isPlaying = !isPlaying;
+            typeWriter();
+        };
+    </script>
+</body>
+
+</html>

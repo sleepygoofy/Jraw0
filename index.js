@@ -1,4 +1,4 @@
-const texts = ["Amateur Programmer", "Donate Crypto!", "Give me $2 in crypto and this yours", "Liking toes is weird asf", "Gay son or thot daughter?"];
+const texts = ["Amateur Programmer", "Donate Crypto!"];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
