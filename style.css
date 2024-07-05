@@ -12,22 +12,22 @@ html, body {
     color: white !important;
 
     .phone {
-        display: none;
-      }
-      #enter {
-        display: none;
-      }
-      @media (max-width: 768px) {
+    display: none;
+    }
+    #enter {
+    display: none;
+    }
+    @media (max-width: 768px) {
         #video {
-          display: none !important;
+            display: none !important;
         }
         .pc {
-          display: none;
+            display: none;
         }
         .phone {
-          display: block;
+            display: block;
         }
-      }
+    }   
 }
 
 .player {
@@ -51,16 +51,10 @@ html, body {
 }
 
 .player p {
-    position: fixed;
-    justify-content: center;
-    display: flex;
     color: #ffffff;
-    margin-left: 50%;
-    transform: translateX(-50%);
     font-size: 16px;
-    width: 100%;
     text-shadow: #000000 3px 2px 7px !important;
-
+    margin-bottom: -40px;
 }
 
 .icons {
@@ -273,7 +267,6 @@ html, body {
     margin-top: -2px;
     cursor: pointer;
     box-shadow: #000000 3px 3px 20px !important;
-
 }
 
 #volumeSlider::-webkit-slider-thumb {
@@ -312,4 +305,10 @@ html, body {
     margin-top: 57px;
     margin-left: 10px;
     text-shadow: #000000 3px 2px 7px !important;
+}
+
+.volume_Percent {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: -155px;
 }

@@ -73,6 +73,7 @@ const progressBar = document.getElementById("progressBar");
 const volumeSlider = document.getElementById('volumeSlider');
 const currentTimeDisplay = document.getElementById('currentTime');
 const totalTimeDisplay = document.getElementById('totalTime');
+const volumePercent = document.getElementById('volumePercent')
 
 document.getElementById("prev").addEventListener("click", () => {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
@@ -189,11 +190,13 @@ clickToEnterOverlay.onclick = () => {
 
 // Set initial volume and update volume slider background
 videoPlayer.volume = volumeSlider.value / 100;
+volumePercent.innerText = `${volumeSlider.value}%`;
 updateVolumeSliderBackground(volumeSlider, volumeSlider.value);
 
 // Volume control event listener
 volumeSlider.addEventListener('input', function () {
     videoPlayer.volume = volumeSlider.value / 100;
+    volumePercent.innerText = `${volumeSlider.value}%`;
     updateVolumeSliderBackground(volumeSlider, volumeSlider.value);
 });
 
