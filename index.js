@@ -71,8 +71,6 @@ const playPauseButton = document.getElementById("playPause");
 const songInfo = document.getElementById("songInfo");
 const progressBar = document.getElementById("progressBar");
 const volumeSlider = document.getElementById('volumeSlider');
-const currentTimeDisplay = document.getElementById('currentTime');
-const totalTimeDisplay = document.getElementById('totalTime');
 const volumePercent = document.getElementById('volumePercent')
 
 document.getElementById("prev").addEventListener("click", () => {
@@ -130,21 +128,9 @@ function loadSong(index) {
     videoPlayer.src = songs[index].src;
     songInfo.innerText = songs[index].title;
     progressBar.value = 0;
-
-    // Update total time display
-    videoPlayer.addEventListener("loadedmetadata", () => {
-        totalTimeDisplay.textContent = formatTime(videoPlayer.duration);
-    });
 }
 
 loadSong(currentSongIndex);
-
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    const formatted = `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-    return formatted;
-}
 
 // Initialize Typewriter and Play Music on Click
 document.addEventListener('DOMContentLoaded', function () {
