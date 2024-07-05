@@ -10,6 +10,24 @@ html, body {
     background-color: black;
     overflow: hidden;
     color: white !important;
+
+    .phone {
+        display: none;
+      }
+      #enter {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        #video {
+          display: none !important;
+        }
+        .pc {
+          display: none;
+        }
+        .phone {
+          display: block;
+        }
+      }
 }
 
 .player {
@@ -111,7 +129,7 @@ html, body {
     margin-top: 60px;
     cursor: pointer;
     box-shadow: #000000 3px 3px 20px !important;
-
+    transition: 100ms;
 }
 
 .slider::-webkit-slider-thumb, #volumeSlider::-webkit-slider-thumb {
@@ -126,6 +144,8 @@ html, body {
     position: relative;
     border: 1px solid #ffffff;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)); /* Updated drop shadow */
+    transition: 100ms;
+
 }
 
 .slider::-moz-range-thumb, #volumeSlider::-moz-range-thumb {
@@ -138,6 +158,7 @@ html, body {
     position: relative;
     border: 1px solid #ffffff;
     filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5)); /* Updated drop shadow */
+    transition: 100ms;
 }
 
 .video-container {

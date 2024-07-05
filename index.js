@@ -105,9 +105,6 @@ videoPlayer.addEventListener("timeupdate", () => {
     let value = (videoPlayer.currentTime / videoPlayer.duration) * 100;
     progressBar.value = value;
     updateSliderBackground(progressBar, value);
-
-    // Update current time display
-    currentTimeDisplay.textContent = formatTime(videoPlayer.currentTime);
 });
 
 progressBar.addEventListener("input", () => {
