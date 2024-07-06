@@ -323,7 +323,7 @@ html, body {
         width: 80%; /* Adjust slider width for mobile */
         max-width: 300px; /* Ensure it doesn't exceed 300px */
     }
-
+    
     #volumeSlider {
         width: 80px; /* Adjust volume slider width for mobile */
     }
