@@ -256,8 +256,8 @@ html, body {
 .volume-control {
     display: flex;
     align-items: center;
-    margin-left: -10px;
-    margin-top: -20px;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 #volumeSlider {
@@ -268,7 +268,6 @@ html, body {
     background: linear-gradient(to right, #ffffff 0%, #ffffff 0%, #cbcbcb 0%, #cbcbcb 100%);
     outline: none;
     border-radius: 5px;
-    margin-top: -2px;
     cursor: pointer;
     box-shadow: #000000 3px 3px 20px !important;
 }
@@ -298,23 +297,17 @@ html, body {
 }
 
 #currentTime {
-    position: fixed;
-    margin-top: 57px;
-    margin-left: -35px;
     text-shadow: #000000 3px 2px 7px !important;
 }
 
 #totalDuration {
-    position: fixed;
-    margin-top: 57px;
-    margin-left: 10px;
     text-shadow: #000000 3px 2px 7px !important;
 }
 
 .volume_Percent {
     width: 100%;
-    margin-top: 5px;
-    margin-left: -155px;
+    margin-top: 10px; /* Adjust this value as needed for spacing */
+    text-align: center;
 }
 
 /* Media Query for Mobile Devices */
@@ -326,5 +319,10 @@ html, body {
     
     #volumeSlider {
         width: 80px; /* Adjust volume slider width for mobile */
+    }
+
+    .volume_Percent {
+        margin-top: 10px; /* Adjust this value for spacing */
+        text-align: center;
     }
 }
