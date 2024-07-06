@@ -35,7 +35,7 @@ html, body {
 
 .player {
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -57,9 +57,9 @@ html, body {
 
 .player p {
     color: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     text-shadow: #000000 3px 2px 7px !important;
-    margin-bottom: 10px;
+    margin-bottom: -5px;
 }
 
 .icons {
@@ -211,7 +211,7 @@ html, body {
 
 .player #typewriter {
     color: white;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     margin-top: 5px;
@@ -219,7 +219,7 @@ html, body {
 }
 
 #typewriter-line {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .clickToEnter {
@@ -306,7 +306,13 @@ html, body {
 
 .volume_Percent {
     width: 100%;
-    margin-top: 10px; /* Adjust this value as needed for spacing */
+    margin-top: 0px; /* Adjust this value as needed for spacing */
+    text-align: center;
+}
+
+.volume {
+    margin-bottom: -15px;
+    justify-content: center;
     text-align: center;
 }
 
@@ -322,7 +328,7 @@ html, body {
     }
 
     .volume_Percent {
-        margin-top: 20px; /* Adjust this value for spacing */
+        margin-top: 10px; /* Adjust this value for spacing */
         text-align: center;
     }
 }

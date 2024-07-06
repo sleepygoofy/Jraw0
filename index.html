@@ -56,23 +56,28 @@
 
         <div class="cool"></div>
 
-        <p id="songInfo"></p>
-        <input type="range" min="0" max="100" class="slider" id="progressBar">
-        <div class="controls">
-            <button id="prev">&#171;</button>
-            <button id="playPause">&#9658;</button>
-            <button id="next">&#187;</button>
+        <div class="blurBG">
+            <p id="songInfo"></p>
+            <input type="range" min="0" max="100" class="slider" id="progressBar">
+            <div class="controls">
+                <button id="prev">&#171;</button>
+                <button id="playPause">&#9658;</button>
+                <button id="next">&#187;</button>
+                
+            </div>
             
+    
+            <div class="volume">
+                <div class="volume-control">
+                    <input class="volumeSlider" type="range" id="volumeSlider" min="0" max="100" value="50">
+                </div>
+                
+                <div class="volume_Percent">
+                    <span class="volume-percent" id="volumePercent"></span>
+                </div>
+            </div>  
         </div>
-        
-
-        <div class="volume-control">
-            <input class="volumeSlider" type="range" id="volumeSlider" min="0" max="100" value="50">
-        </div>
-        
-        <div class="volume_Percent">
-            <span class="volume-percent" id="volumePercent"></span>
-        </div>
+             
         
     </div>
 
