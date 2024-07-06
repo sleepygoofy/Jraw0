@@ -13,6 +13,11 @@ html, body {
     color: white !important;
 }
 
+@font-face {
+    font-family: 'Pixel';
+    src: url('Pixel.ttf'); 
+}
+
 .phone {
     display: none;
 }
@@ -49,6 +54,7 @@ html, body {
 }
 
 .player h1 {
+    font-family: 'Pixel', monospace;
     margin: 0;
     font-size: 24px;
     color: white;
@@ -60,6 +66,7 @@ html, body {
     font-size: 16px;
     text-shadow: #000000 3px 2px 7px !important;
     margin-bottom: -5px;
+    margin-top: 5px;
 }
 
 .icons {
@@ -119,7 +126,7 @@ html, body {
 .slider {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
+    width: 90%;
     max-width: 380px;
     height: 10px;
     background: linear-gradient(to right, #ffffff 0%, #ffffff 0%, #cbcbcb 0%, #cbcbcb 100%);
@@ -202,7 +209,7 @@ html, body {
 
 .pfp {
     width: 96px;
-    margin-top: -60px;
+    margin-top: -20%;
     border-radius: 50%;
     pointer-events: none;
     user-select: none;
@@ -306,14 +313,28 @@ html, body {
 
 .volume_Percent {
     width: 100%;
-    margin-top: 0px; /* Adjust this value as needed for spacing */
+    margin-top: 5px; /* Adjust this value as needed for spacing */
     text-align: center;
 }
 
 .volume {
-    margin-bottom: -15px;
     justify-content: center;
     text-align: center;
+    margin-bottom: 5px;
+}
+
+.blurBG {
+    backdrop-filter: blur(10px);
+    width: 105%;
+    height: 110%;
+    border-radius: 10px;
+    background-color: rgba(150, 150, 150, 0.1);
+    border: 2px solid rgba(150, 150, 150, 0.25);
+    justify-content: center;
+    text-align: center;
+    margin-left: 50%;
+    margin-top: 20px;
+    transform: translateX(-50%);
 }
 
 /* Media Query for Mobile Devices */
