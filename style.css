@@ -318,11 +318,11 @@ html, body {
     }
     
     #volumeSlider {
-        width: 80px; /* Adjust volume slider width for mobile */
+        width: 120px; /* Adjust volume slider width for mobile */
     }
 
     .volume_Percent {
-        margin-top: 10px; /* Adjust this value for spacing */
+        margin-top: 20px; /* Adjust this value for spacing */
         text-align: center;
     }
 }
