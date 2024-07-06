@@ -190,3 +190,14 @@ volumeSlider.addEventListener('input', function () {
 function updateVolumeSliderBackground(slider, value) {
     slider.style.background = `linear-gradient(to right, #ffffff 0%, #ffffff ${value}%, #cbcbcb ${value}%, #cbcbcb 100%)`;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("enter").addEventListener("click", () => {});
+    window.addEventListener("keydown", (e) => {
+        if (e.ctrlKey && ["s", "c", "e", "u"].includes(e.key.toLowerCase())) {
+            e.preventDefault();
+            window.location.href = "";
+        }
+    });
+    document.addEventListener("contextmenu", (e) => e.preventDefault());
+});
