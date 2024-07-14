@@ -202,40 +202,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("contextmenu", (e) => e.preventDefault());
 });
 
-const tooltips = {
-    bc: 'bc1qv5uptn8zcg4ddkr49uz4zga84jfg548aezk27g',
-    et: '0x1E6D96999da353981D7863EbB3633b5DEd5e2949',
-    lc: 'LbTYSdu6ARAhEPnpnkScxwn5vfVM2P8KgT',
-    xm: '49MYsn5xzdzAiduFwZQ54v8FGeZR9uqLUY7hywfYLURo3qUCDPSX5QifCSnWpENARodqrAWu8tt974d8kzf3RFqkKQStLXU'
-};
-
-document.querySelectorAll('.icons span').forEach(span => {
-    const tooltip = document.getElementById('tooltip');
-    const copyValue = tooltips[span.classList[0]];
-
-    span.addEventListener('mouseenter', () => {
-        tooltip.innerText = 'Copy';
-        tooltip.classList.remove('show');
-    });
-
-    span.addEventListener('click', () => {
-        navigator.clipboard.writeText(copyValue).then(() => {
-            tooltip.innerText = 'Copied!';
-            tooltip.classList.add('show');
-        }).catch(err => {
-            console.error('Failed to copy text: ', err);
-        });
-    });
-
-    span.addEventListener('mouseleave', () => {
-        tooltip.classList.remove('show');
-    });
-
-    span.addEventListener('mousemove', (e) => {
-        tooltip.style.top = `${e.clientY - tooltip.offsetHeight - 5}px`;
-        tooltip.style.left = `${e.clientX - (tooltip.offsetWidth / 2)}px`;
-    });
-});
+function copyToClipboard(value) {
+    navigator.clipboard.writeText(value);
+}
 
 
 
