@@ -14,6 +14,14 @@ html, body {
 }
 
 @font-face {
+    font-family: 'PF Tempesta Five';
+    font-style: normal;
+    font-weight: 400;
+    src: local('PF Tempesta Five'), url('https://fonts.cdnfonts.com/s/7373/pf_tempesta_five.woff') format('woff');
+}
+
+
+@font-face {
     font-family: 'Pixel';
     src: url('Pixel.ttf'); 
 }
@@ -54,7 +62,7 @@ html, body {
 }
 
 .player h1 {
-    font-family: 'Pixel', monospace;
+    font-family: 'PF Tempesta Five', monospace;
     margin: 0;
     font-size: 24px;
     color: white;
@@ -72,25 +80,28 @@ html, body {
 .icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
     margin-bottom: 5px;
     color: #ffffff !important;
     filter: drop-shadow(#000000 1px 0 7px) !important;
 }
 
-.dc, .ig, .lk {
+.dc, .ig, .lk, .bc, .et, .lc, .xm {
     bottom: 50%;
     left: 50%;
     pointer-events: none;
+    cursor: pointer;
 }
 
-.dci, .igi, .lki {
+.dci, .igi, .lki, .bci, .eti, .lci, .xmi {
     pointer-events: all;
     transition: 0.2s;
+    width: 2.75em;
+    height: 2.75em;
 }
 
-.dci:hover, .igi:hover, .lki:hover {
+.dci:hover, .igi:hover, .lki:hover, .bci:hover, .eti:hover, .lci:hover, .xmi:hover {
     transform: scale(1.1);
 }
 
