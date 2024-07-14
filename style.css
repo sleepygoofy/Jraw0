@@ -363,4 +363,11 @@ html, body {
         margin-top: 10px; /* Adjust this value for spacing */
         text-align: center;
     }
+
+    .dci, .igi, .lki, .bci, .eti, .lci, .xmi {
+        pointer-events: all;
+        transition: 0.2s;
+        width: 2em;
+        height: 2em;
+    }
 }
