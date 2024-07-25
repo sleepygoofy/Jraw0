@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -20,32 +20,56 @@ html, body {
     src: local('PF Tempesta Five'), url('https://fonts.cdnfonts.com/s/7373/pf_tempesta_five.woff') format('woff');
 }
 
-
 @font-face {
     font-family: 'Pixel';
     src: url('Pixel.ttf'); 
 }
 
+/* Utility Classes */
 .phone {
     display: none;
 }
 
-#enter {
-    display: none;
+.clickToEnter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    background-color: rgba(9, 9, 9, 0.95);
+    backdrop-filter: blur(20px);
+    transition: 1s;
 }
 
-@media (max-width: 768px) {
-    #video {
-        display: none !important;
-    }
-    .pc {
-        display: none;
-    }
-    .phone {
-        display: block;
-    }
+.click123 {
+    margin-bottom: 45%;
+    font-size: 0.5em;
+    color: rgb(120, 120, 120);
+    pointer-events: none;
+    user-select: none;
 }
 
+.ascii {
+    width: 10em;
+    position: fixed;
+    pointer-events: none;
+    user-select: none;
+}
+
+.cool {
+    opacity: 0.7;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, transparent, white, transparent);
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Component Styles */
 .player {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -75,6 +99,50 @@ html, body {
     text-shadow: #000000 3px 2px 7px !important;
     margin-bottom: -5px;
     margin-top: 5px;
+}
+
+.player #typewriter {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+#typewriter-line {
+    font-size: 16px;
+}
+
+#enter, #video {
+    display: none;
+}
+
+.pfp {
+    width: 96px;
+    margin-top: -20%;
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+    border: 3px solid rgba(150, 150, 150, 0.25);
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    z-index: 0;
+    text-align: center;
+}
+
+#videoPlayer {
+    height: 100%;
 }
 
 .icons {
@@ -177,33 +245,6 @@ html, body {
     transition: 100ms;
 }
 
-.video-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
-    z-index: 0;
-    text-align: center;
-}
-
-#videoPlayer {
-    height: 100%;
-}
-
-.cool {
-    opacity: 0.7;
-    height: 3px;
-    width: 100%;
-    background: linear-gradient(to right, transparent, white, transparent);
-    margin-left: 50%;
-    transform: translateX(-50%);
-}
-
 .slider-container {
     display: flex;
     justify-content: center;
@@ -216,58 +257,6 @@ html, body {
 .slider-container span {
     color: white;
     font-size: 14px;
-}
-
-.pfp {
-    width: 96px;
-    margin-top: -20%;
-    border-radius: 50%;
-    pointer-events: none;
-    user-select: none;
-    border: 3px solid rgba(150, 150, 150, 0.25);
-}
-
-.player #typewriter {
-    color: white;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
-    margin-bottom: -5px;
-}
-
-#typewriter-line {
-    font-size: 16px;
-}
-
-.clickToEnter {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5em;
-    font-weight: bold;
-    background-color: rgba(9, 9, 9, 0.95);
-    backdrop-filter: blur(20px);
-    transition: 1s;
-}
-
-.click123 {
-    margin-bottom: 45%;
-    font-size: 0.5em;
-    color: rgb(120, 120, 120);
-    pointer-events: none;
-    user-select: none;
-}
-
-.ascii {
-    width: 10em;
-    position: fixed;
-    pointer-events: none;
-    user-select: none;
 }
 
 /* Volume Slider CSS */
@@ -314,17 +303,13 @@ html, body {
     border: 1px solid #ffffff;
 }
 
-#currentTime {
-    text-shadow: #000000 3px 2px 7px !important;
-}
-
-#totalDuration {
+#currentTime, #totalDuration {
     text-shadow: #000000 3px 2px 7px !important;
 }
 
 .volume_Percent {
     width: 100%;
-    margin-top: 5px; /* Adjust this value as needed for spacing */
+    margin-top: 5px;
     text-align: center;
 }
 
@@ -348,22 +333,28 @@ html, body {
     transform: translateX(-50%);
 }
 
-/* Media Query for Mobile Devices */
+/* Media Queries */
 @media (max-width: 768px) {
+    #video {
+        display: none !important;
+    }
+    .pc {
+        display: none;
+    }
+    .phone {
+        display: block;
+    }
     .slider {
-        width: 80%; /* Adjust slider width for mobile */
-        max-width: 300px; /* Ensure it doesn't exceed 300px */
+        width: 80%;
+        max-width: 300px;
     }
-    
     #volumeSlider {
-        width: 120px; /* Adjust volume slider width for mobile */
+        width: 120px;
     }
-
     .volume_Percent {
-        margin-top: 10px; /* Adjust this value for spacing */
+        margin-top: 10px;
         text-align: center;
     }
-
     .dci, .igi, .lki, .bci, .eti, .lci, .xmi {
         pointer-events: all;
         transition: 0.2s;
