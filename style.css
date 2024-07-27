@@ -145,12 +145,17 @@ html, body {
     height: 100%;
 }
 
+a:not(:hover), .bc:not(:hover), .et:not(:hover), .lc:not(:hover), .xm:not(:hover) {
+    filter: blur(0.5px);
+    transition: 0.2s;
+}
+
 .icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 13px;
     color: #ffffff !important;
     filter: drop-shadow(#000000 1px 0 7px) !important;
 }
@@ -160,6 +165,7 @@ html, body {
     left: 50%;
     pointer-events: none;
     cursor: pointer;
+    transition: 0.2s;
 }
 
 .dci, .igi, .lki, .bci, .eti, .lci, .xmi {
