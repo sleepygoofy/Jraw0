@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function copyToClipboard(value) {
     navigator.clipboard.writeText(value);
+    alert("Copied to clipboard!")
 }
 
 var snowStorm = function (g, f) {
