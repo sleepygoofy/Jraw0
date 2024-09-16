@@ -65,11 +65,15 @@ html, body {
     background: linear-gradient(to right, transparent, white, transparent);
     margin-left: 50%;
     transform: translateX(-50%);
+
 }
 
 .player {
+    opacity: 0;
+    transition-delay: 0.1s;
+    transition-duration: 1s;
     background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px;
     text-align: center;
@@ -80,6 +84,7 @@ html, body {
     border: 2px solid rgba(150, 150, 150, 0.25);
     box-sizing: border-box;
     margin: 10px;
+    margin-top: 200px;
 }
 
 .player h1 {
@@ -140,11 +145,6 @@ html, body {
 
 #videoPlayer {
     height: 100%;
-}
-
-a:not(:hover), .bc:not(:hover), .et:not(:hover), .lc:not(:hover), .xm:not(:hover) {
-    filter: blur(0.5px);
-    transition: 0.2s;
 }
 
 .icons {

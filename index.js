@@ -60,8 +60,8 @@ setInterval(() => {
 const songs = [
     { title: "woody - Paint Thinner", src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4"},
     { title: "woody - God Said I Was Good", src: "https://easyfiles.cc/2024/8/9cafa851-0405-4009-b639-08ff5e029dc3/youtube_Z4IF2ujq1Xk_1280x720_h264(1).mp4"},
-    { title: "BrySi - King Of CoD", src: "https://easyfiles.cc/2024/8/3b9203a0-406b-47e8-a574-6f2f8ca12d50/youtube_jugDNQyK830_1280x720_h264(1).mp4"},
-    { title: "woody - burnnn", src: "https://easyfiles.cc/2024/8/75f8bf60-3bd7-4589-aa9d-17e6d42b6df5/youtube_fRaSnN5RqMU_1280x720_h264(1).mp4"},
+    { title: "smokedope2016 - On My Roof", src: "https://easyfiles.cc/2024/9/443c0270-b602-4e6b-8264-07c25018b958/on%20my%20roof.mp4"},
+    { title: "SmokeTeam6 - PackistanFlashback", src: "https://easyfiles.cc/2024/9/cb2ad630-0a65-4711-ab07-3482dc42f2d3/SmokeTeam6%20-%20PackistanFlashback%20(VEVO%20Official%20Music%20Video)%20-%20benwbush%20(1080p,%20h264).mp4"},
     { title: "sniper2004 - la ny", src: "https://easyfiles.cc/2024/8/b8332c2a-e70b-4ec0-9ba8-acc7e5449db7/youtube_mkmn3QZSZUM_874x720_h264(1).mp4"},
     { title: "woody - Houston", src: "https://easyfiles.cc/2024/8/3f5096d9-3ef1-43c2-bff1-9ed6e05e4c64/youtube_tGxXSr_itPk_1280x720_h264(1).mp4"},
     { title: "Joeyy - PR Package", src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4"},
@@ -71,12 +71,17 @@ const songs = [
 let currentSongIndex = 0;
 let isPlaying = false;
 
+const main = document.getElementById("player")
 const videoPlayer = document.getElementById("videoPlayer");
 const playPauseButton = document.getElementById("playPause");
 const songInfo = document.getElementById("songInfo");
 const progressBar = document.getElementById("progressBar");
 const volumeSlider = document.getElementById('volumeSlider');
 const volumePercent = document.getElementById('volumePercent')
+
+progressBar.addEventListener('wheel', function(event) {
+    event.preventDefault();
+});
 
 document.getElementById("prev").addEventListener("click", () => {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
@@ -169,6 +174,9 @@ clickToEnterOverlay.onclick = () => {
     clickToEnterOverlay.style.transition = '0.75s';
     clickToEnterOverlay.style.opacity = '0';
     clickToEnterOverlay.style.zIndex = '-9999';
+
+    main.style.opacity = "1";
+    main.style.marginTop = "0px";
 
     videoPlayer.play();
     playPauseButton.innerHTML = "&#10074;&#10074;";
