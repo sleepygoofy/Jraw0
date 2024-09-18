@@ -17,7 +17,7 @@
 
 <body>
 
-
+    <script disable-devtool-auto="" src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
 
     <div class="video-container">
         <video id="videoPlayer"></video>
@@ -95,35 +95,35 @@
 
         <div class="blurBG">
             <p id="songInfo"></p>
-            <input type="range" min="0" max="100" class="slider" id="progressBar">
+            <div class="duration-container">
+                <input type="range" min="0" max="100" class="slider" id="progressBar">
+                <div class="duration-info">
+                    <span id="current-duration">0:00</span>
+                    <span id="total-duration">0:00</span>
+                </div>
+            </div>
             <div class="controls">
                 <button id="prev">&#171;</button>
                 <button id="playPause">&#9658;</button>
                 <button id="next">&#187;</button>
-
             </div>
-
             <div class="volume">
                 <div class="volume-control">
                     <input class="volumeSlider" type="range" id="volumeSlider" min="0" max="100" value="50">
                 </div>
-
                 <div class="volume_Percent">
                     <span class="volume-percent" id="volumePercent"></span>
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <div class="clickToEnter" id="clickToEnter">
-        <img class="ascii" src="https://easyfiles.cc/2024/5/5d696a25-bab7-49ed-a325-a0b1bb812ab8/transformedascii.png"
-            alt="">
+        <img class="ascii" src="https://easyfiles.cc/2024/5/5d696a25-bab7-49ed-a325-a0b1bb812ab8/transformedascii.png"alt="">
     </div>
 
     <script src="index.js"></script>
-    <script src="script.js"></script>
+    <script src="audio.js"></script>
 
 </body>
 

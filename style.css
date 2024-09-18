@@ -363,3 +363,13 @@ html, body {
         height: 2em;
     }
 }
+
+div.duration-info {
+    display: flex;
+    gap: 277px;
+    margin-left: 20px;
+}
+
+button {
+    user-select: none;
+}
