@@ -1,1 +1,122 @@
-function _0xe000(_0x435b59,_0x2cd998){const _0x493227=_0x4932();return _0xe000=function(_0xe000a3,_0xf28168){_0xe000a3=_0xe000a3-0x199;let _0x51ff66=_0x493227[_0xe000a3];return _0x51ff66;},_0xe000(_0x435b59,_0x2cd998);}const _0x2a4149=_0xe000;(function(_0x577042,_0x2c069b){const _0x47da66=_0xe000,_0x3bcdbf=_0x577042();while(!![]){try{const _0x2bc080=-parseInt(_0x47da66(0x1a0))/0x1*(parseInt(_0x47da66(0x1c3))/0x2)+parseInt(_0x47da66(0x1b2))/0x3*(-parseInt(_0x47da66(0x1c8))/0x4)+parseInt(_0x47da66(0x1b1))/0x5*(-parseInt(_0x47da66(0x19d))/0x6)+parseInt(_0x47da66(0x1b4))/0x7+parseInt(_0x47da66(0x19e))/0x8*(-parseInt(_0x47da66(0x1c6))/0x9)+parseInt(_0x47da66(0x1ba))/0xa+parseInt(_0x47da66(0x19f))/0xb*(parseInt(_0x47da66(0x1ca))/0xc);if(_0x2bc080===_0x2c069b)break;else _0x3bcdbf['push'](_0x3bcdbf['shift']());}catch(_0x3bb907){_0x3bcdbf['push'](_0x3bcdbf['shift']());}}}(_0x4932,0x446fe));const texts=[_0x2a4149(0x1c9),_0x2a4149(0x1cd),_0x2a4149(0x1b5),_0x2a4149(0x1c1),_0x2a4149(0x1c0),_0x2a4149(0x1ac),_0x2a4149(0x1b3),_0x2a4149(0x19a)];let textIndex=0x0,charIndex=0x0,isDeleting=![],typingSpeed=0x4b,deleteSpeed=0x28,delayBeforeDelete=0x3e8,blinkSpeed=0x32;function typeWriter(){const _0xd91c83=_0x2a4149,_0x289f8b=texts[textIndex];let _0x3d680e='';isDeleting?(_0x3d680e=_0x289f8b[_0xd91c83(0x19b)](0x0,charIndex-0x1),charIndex--):(_0x3d680e=_0x289f8b['substring'](0x0,charIndex+0x1),charIndex++);_0x3d680e+=_0xd91c83(0x1bb),document[_0xd91c83(0x1cb)]('typewriter')[_0xd91c83(0x1ce)]=_0x3d680e;if(!isDeleting&&charIndex===_0x289f8b['length']+0x1)isDeleting=!![],setTimeout(typeWriter,delayBeforeDelete);else isDeleting&&charIndex===0x0?(isDeleting=![],textIndex=(textIndex+0x1)%texts[_0xd91c83(0x1c2)],setTimeout(typeWriter,0x3e8)):setTimeout(typeWriter,isDeleting?deleteSpeed:typingSpeed);}let opacity=0x0,direction=0x1;setInterval(()=>{const _0x3e033c=_0x2a4149,_0x39530c=document[_0x3e033c(0x1cb)](_0x3e033c(0x1b8));_0x39530c&&(_0x39530c[_0x3e033c(0x1ad)]['opacity']=opacity,opacity+=0.1*direction,(opacity<=0x0||opacity>=0x1)&&(direction*=-0x1));},0x32),document['addEventListener'](_0x2a4149(0x1a9),function(){const _0x5f21b0=_0x2a4149,_0x1765fa=_0x5f21b0(0x19c);let _0x4ec343=0x0,_0x4922b4=!![];function _0x1f9fdc(){const _0x538aa6=_0x5f21b0;if(_0x4922b4){document[_0x538aa6(0x1b9)]=_0x1765fa[_0x538aa6(0x19b)](0x0,_0x4ec343+0x1),_0x4ec343++;if(_0x4ec343===_0x1765fa['length']){_0x4922b4=![],setTimeout(_0x1f9fdc,0x5dc);return;}}else{document[_0x538aa6(0x1b9)]=_0x1765fa[_0x538aa6(0x19b)](0x0,_0x4ec343-0x1),_0x4ec343--;if(_0x4ec343===0x1){_0x4922b4=!![],setTimeout(_0x1f9fdc,0x1f4);return;}}setTimeout(_0x1f9fdc,0x14d);}_0x1f9fdc();});let clickToEnterOverlay=document[_0x2a4149(0x1cb)](_0x2a4149(0x1bd));clickToEnterOverlay[_0x2a4149(0x1a4)]=()=>{const _0x28e912=_0x2a4149;clickToEnterOverlay[_0x28e912(0x1ad)]['transition']='0.75s',clickToEnterOverlay[_0x28e912(0x1ad)]['opacity']='0',clickToEnterOverlay[_0x28e912(0x1ad)][_0x28e912(0x1a7)]='-9999',main[_0x28e912(0x1ad)][_0x28e912(0x1af)]='1',main['style'][_0x28e912(0x1c7)]=_0x28e912(0x1b6),videoPlayer[_0x28e912(0x1b7)](),playPauseButton[_0x28e912(0x1ce)]=_0x28e912(0x1a5),isPlaying=!isPlaying,typeWriter(),typeof snowStorm!==_0x28e912(0x1c4)?snowStorm[_0x28e912(0x199)]():console[_0x28e912(0x1c5)](_0x28e912(0x1a1));},document[_0x2a4149(0x1bc)](_0x2a4149(0x1a9),()=>{const _0x4965f0=_0x2a4149;window['addEventListener'](_0x4965f0(0x1b0),_0x3b980d=>{const _0x4f1125=_0x4965f0;_0x3b980d[_0x4f1125(0x1be)]&&['s','c','e','u'][_0x4f1125(0x1a2)](_0x3b980d[_0x4f1125(0x1a3)]['toLowerCase']())&&(_0x3b980d[_0x4f1125(0x1a8)](),window[_0x4f1125(0x1a6)][_0x4f1125(0x1cc)]='https://pornhub.com/gay');}),document[_0x4965f0(0x1bc)](_0x4965f0(0x1bf),_0xc963b5=>_0xc963b5[_0x4965f0(0x1a8)]());});function copyToClipboard(_0x44ad42){const _0x45f1b7=_0x2a4149;navigator[_0x45f1b7(0x1ae)][_0x45f1b7(0x1aa)](_0x44ad42),alert(_0x45f1b7(0x1ab));}function _0x4932(){const _0x412db4=['addEventListener','clickToEnter','ctrlKey','contextmenu','iluvshed','woody..\x20my\x20dearest\x20૮˶ᵔᵕᵔ˶ა','length','8yeWbiR','undefined','error','436473AyILLl','marginTop','52804Sonmln','Amateur\x20Programmer','12yaVPko','getElementById','href','Donate\x20Crypto!','innerHTML','start','#teammhuman','substring','@zyqunix','180OMquEW','48aMZsze','6348122VDJFWL','65449xZXEpP','Snowstorm\x20is\x20not\x20defined.','includes','key','onclick','&#10074;&#10074;','location','zIndex','preventDefault','DOMContentLoaded','writeText','Copied\x20to\x20clipboard!','#lacethemwithfent','style','clipboard','opacity','keydown','84650ULOYTH','21aeZjlD','#lifeiseasy','3528749YUBjfk','lispnb\x20and\x20pluggnb\x20<3\x20<3','0px','play','typewriter-line','title','3521940hwwnUi','<span\x20id=\x27typewriter-line\x27>|</span>'];_0x4932=function(){return _0x412db4;};return _0x4932();}
+const messages = [
+    "Amateur Programmer",
+    "Donate Crypto!",
+    "lispnb and pluggnb <3 <3",
+    "woody.. my dearest ૮˶ᵔᵕᵔ˶ა",
+    "iluvshed",
+    "#lacethemwithfent",
+    "#lifeiseasy",
+    "#teammhuman"
+];
+
+let currentMessageIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+
+function typeWriter() {
+    const currentMessage = messages[currentMessageIndex];
+    let displayText = '';
+
+    if (isDeleting) {
+        displayText = currentMessage.substring(0, currentCharIndex - 1);
+        currentCharIndex--;
+    } else {
+        displayText = currentMessage.substring(0, currentCharIndex + 1);
+        currentCharIndex++;
+    }
+
+    displayText += "<span id='typewriter-line'>|</span>";
+    document.getElementById('typewriter').innerHTML = displayText;
+
+    if (!isDeleting && currentCharIndex === currentMessage.length + 1) {
+        isDeleting = true;
+        setTimeout(typeWriter, 1000);
+    } else if (isDeleting && currentCharIndex === 0) {
+        isDeleting = false;
+        currentMessageIndex = (currentMessageIndex + 1) % messages.length;
+        setTimeout(typeWriter, 1000);
+    } else {
+        setTimeout(typeWriter, isDeleting ? 40 : 75);
+    }
+}
+
+let cursorOpacity = 0;
+let fadeDirection = 1;
+
+setInterval(() => {
+    const cursorElement = document.getElementById("typewriter-line");
+
+    if (cursorElement) {
+        cursorElement.style.opacity = cursorOpacity;
+        cursorOpacity += 0.1 * fadeDirection;
+
+        if (cursorOpacity <= 0 || cursorOpacity >= 1) {
+            fadeDirection *= -1;
+        }
+    }
+}, 50);
+
+document.addEventListener("DOMContentLoaded", function () {
+    let titleIndex = 0;
+    let increasingTitle = true;
+
+    function updateTitle() {
+        const titleText = "@zyqunix";
+
+        if (increasingTitle) {
+            document.title = titleText.substring(0, titleIndex + 1);
+            titleIndex++;
+
+            if (titleIndex === titleText.length) {
+                increasingTitle = false;
+                setTimeout(updateTitle, 1500);
+                return;
+            }
+        } else {
+            document.title = titleText.substring(0, titleIndex - 1);
+            titleIndex--;
+
+            if (titleIndex === 1) {
+                increasingTitle = true;
+                setTimeout(updateTitle, 500);
+                return;
+            }
+        }
+
+        setTimeout(updateTitle, 333);
+    }
+
+    updateTitle();
+});
+
+let clickToEnterOverlay = document.getElementById("clickToEnter");
+clickToEnterOverlay.onclick = () => {
+    clickToEnterOverlay.style.transition = '0.75s';
+    clickToEnterOverlay.style.opacity = '0';
+    clickToEnterOverlay.style.zIndex = '-9999';
+
+    main.style.opacity = '1';
+    main.style.marginTop = "0px";
+
+    videoPlayer.play();
+    playPauseButton.innerHTML = "&#10074;&#10074;";
+    isPlaying = !isPlaying;
+
+    typeWriter();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener("keydown", event => {
+        if (event.ctrlKey && ['s', 'c', 'e', 'u'].includes(event.key.toLowerCase())) {
+            event.preventDefault();
+            window.location.href = 'https://pornhub.com/gay';
+        }
+    });
+
+    document.addEventListener("contextmenu", event => event.preventDefault());
+});
+
+function copyToClipboard(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copied to clipboard!");
+}
