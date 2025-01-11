@@ -1,38 +1,38 @@
 const songs = [
     { 
-        title: "Bladee & Ecco2k - Bleach", 
-        src: "https://easyfiles.cc/2024/9/4ac37ab2-20d7-4fd8-863b-3dcee1c418cd/BLADEE%20&%20ECCO2K%20-%20BLEACH%20-%20drain%20gang%20(720p50,%20h264)(1).mp4" ,
-        duration: 153
+        title: "EVIL JORDAN - Playboi Carti", 
+        src: "https://easyfiles.cc/2025/1/628626a4-d64f-406d-8293-df887e6561db/EVILJ0RDAN%20POPULAR%20INTRO%20[MOST%20ACCURATE%20VERSION%20by%20OK].mp4" ,
+        duration: 130
     },
 
     { 
-        title: "woody - Heaven & Hell", 
-        src: "https://easyfiles.cc/2024/9/20fa08a2-8212-4212-93b7-9c62fc563505/woody%20heaven%20&%20hell%20prod.%201mint%20-%20real1woody%20(1080p,%20h264)(1).mp4" ,
-        duration: 142
+        title: "Unkown - Indus Rain", 
+        src: "https://easyfiles.cc/2025/1/f65b632b-5a7a-4b21-a5aa-ed45b695309a/Suspect%20(AGB)%20-%20Caught%20Inda%20Rain%20(Official%20Audio)%20%2523Suspiciousactivity.mp4" ,
+        duration: 188
     },
 
 
     { 
-        title: "woody - God Said I Was Good", 
+        title: "Unkown - God Said I Was Good", 
         src: "https://easyfiles.cc/2024/8/9cafa851-0405-4009-b639-08ff5e029dc3/youtube_Z4IF2ujq1Xk_1280x720_h264(1).mp4" ,
         duration: 135
     },
 
     { 
-        title: "sniper2004 - la ny", 
-        src: "https://easyfiles.cc/2024/8/b8332c2a-e70b-4ec0-9ba8-acc7e5449db7/youtube_mkmn3QZSZUM_874x720_h264(1).mp4" ,
-        duration: 87
+        title: "Armed and dangerous - Jucie Wrld", 
+        src: "https://easyfiles.cc/2025/1/bce377e7-d8d2-4dff-9503-3e4c3bd3abb5/Juice%20WRLD%20-%20Armed%20&%20Dangerous%20(Official%20Music%20Video).mp4" ,
+        duration: 193
     },
 
     { 
-        title: "Joeyy - PR Package", 
-        src: "https://easyfiles.cc/2024/8/7c649f45-6573-4665-9675-4d869ea1332a/youtube_ZvphwrKo52s_1280x720_h264(1).mp4" ,
+        title: "Tokyo Drift - Fast And Furious", 
+        src: "https://easyfiles.cc/2025/1/4ef57486-9252-4b3f-a5b2-8c98cc71e59e/Tokyo%20Drift%20(Fast%20&%20Furious)%20(From%20%C3%AF%C2%BC%C2%82The%20Fast%20And%20The%20Furious%C3%AF%C2%BC%C2%9A%20Tokyo%20Drift%C3%AF%C2%BC%C2%82%20Soundtrack).mp4" ,
         duration: 111
     },
 
     { 
-        title: "woody - Paint Thinner", 
-        src: "https://easyfiles.cc/2024/8/2110cfc6-d700-4c42-bc66-bafa5799c1fc/youtube_rhaFMuU1_qw_1280x720_h264(1).mp4" ,
+        title: "null - Kyle Rich", 
+        src: "https://easyfiles.cc/2025/1/008d7f26-785f-4389-812e-00f6e4adef5f/Kyle%20Richh%20x%20Jenn%20Carter%20x%20TaTa%20x%20MCVERTT%20-%20BENT%20(OFFICIAL%20MUSIC%20VIDEO)%20[41].mp4" ,
         duration: 100
     },
 
