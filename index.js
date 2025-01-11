@@ -1,12 +1,12 @@
 const messages = [
     "Amateur Programmer",
-    "Donate Crypto!",
-    "lispnb and pluggnb <3 <3",
-    "woody.. my dearest ૮˶ᵔᵕᵔ˶ა",
-    "iluvshed",
-    "#lacethemwithfent",
-    "#lifeiseasy",
-    "#teammhuman"
+    "Getting vbucks",
+    "Your on Doxbin",
+    "Send addy",
+    "Its that easy",
+    "#love=life",
+    "#Dont trust everyone",
+    "#Life is a elevator"
 ];
 
 let currentMessageIndex = 0;
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let increasingTitle = true;
 
     function updateTitle() {
-        const titleText = "@zyqunix";
+        const titleText = "@Jraw";
 
         if (increasingTitle) {
             document.title = titleText.substring(0, titleIndex + 1);
@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("keydown", event => {
         if (event.ctrlKey && ['s', 'c', 'e', 'u'].includes(event.key.toLowerCase())) {
             event.preventDefault();
-            window.location.href = 'https://pornhub.com/gay';
+            window.location.href = 'https://jraw.lol';
         }
     });
 
