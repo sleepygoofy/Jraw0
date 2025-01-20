@@ -1,6 +1,6 @@
 # Terms of Service  
 
-Effective Date: [1/1925]  
+Effective Date: [1/19/25]  
 
 Welcome to **jraw.lol**! By accessing/installing or using Blooket CHEATS/HACKS, you acknowledge that THIS IS AGAINST BLOOKETS TOS  and that you have read, understood, and agreed to these Terms of Service. If you do not agree to these terms, please refrain from using this project.  
 
