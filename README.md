@@ -1,1 +1,1 @@
-Kaboom This is made my Zynquix Check em out
+ This is made my Zynquix and edited an revamped by Jraw
